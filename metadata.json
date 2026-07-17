@@ -1,0 +1,6 @@
+{
+  "name": "Art, Aesthetics and AI",
+  "description": "A modern journal for Art, Aesthetics and AI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
