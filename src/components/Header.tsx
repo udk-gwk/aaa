@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ lang, setLang, onNavigate }) => 
               lg:h-20   = Desktop (ab 1024px)
             */}
             <img 
-              src="/aaa_logo_black.png" 
+              src={`${import.meta.env.BASE_URL}aaa_logo_black.png`}
               alt="Art, Aesthetics and AI" 
               className="h-8 md:h-12 lg:h-16 object-contain relative z-10" 
             />

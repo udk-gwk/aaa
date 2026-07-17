@@ -104,7 +104,7 @@ export const ArticleView: React.FC<ArticleViewProps> = ({ article, lang, onBack 
                   {article.documents.map((doc, idx) => (
                     <a 
                       key={idx} 
-                      href={doc.url}
+                      href={import.meta.env.BASE_URL + doc.url.replace(/^\//, '')}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-start gap-3 p-4 bg-gray-50 hover:bg-black hover:text-white transition-colors"
