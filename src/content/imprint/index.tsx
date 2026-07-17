@@ -15,7 +15,13 @@ export const imprintContent = {
       },
       {
         heading: 'Contact',
-        text: 'Email: aaa@ki.udk-berlin.de\nWebsite: https://aaa.udk.digital/'
+        text: (
+          <>
+            Email: <a href="mailto:aaa@udk.digital">aaa@udk.digital</a>
+            <br />
+            Website: <a href="https://aaa.udk.digital/" target="_blank" rel="noreferrer">https://aaa.udk.digital/</a>
+          </>
+        )
       },
       {
         heading: 'License & Additional Info',
@@ -33,7 +39,13 @@ export const imprintContent = {
       },
       {
         heading: 'Contact',
-        text: 'Email: aaa@ki.udk-berlin.de\nWebsite: https://aaa.udk.digital/'
+        text: (
+          <>
+            Email: <a href="mailto:aaa@udk.digital">aaa@udk.digital</a>
+            <br />
+            Website: <a href="https://aaa.udk.digital/" target="_blank" rel="noreferrer">https://aaa.udk.digital/</a>
+          </>
+        )
       },
       {
         heading: 'License & Additional Info',
