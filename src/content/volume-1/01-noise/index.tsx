@@ -340,8 +340,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: 'Philipp_Bieronski_2026.pdf',
-      url: '/Philipp_Bieronski_2026.pdf',
+      name: 'Noise.pdf',
+      url: '/Noise.pdf',
       doi: '10.1234/aaa.v1.001'
     }
   ]

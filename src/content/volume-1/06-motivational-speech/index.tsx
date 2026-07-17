@@ -720,8 +720,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Motivational_Speech.pdf",
-      url: "/Motivational_Speech.pdf",
+      name: "Motivational_Speech_Synthesis.pdf",
+      url: "/Motivational_Speech_Synthesis.pdf",
       doi: "https://doi.org/10.25624/kuenste-2492",
     },
   ],

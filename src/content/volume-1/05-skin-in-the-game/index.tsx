@@ -516,8 +516,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Jana_Moeller_Herm.pdf",
-      url: "/Jana_Moeller_Herm.pdf",
+      name: "Skin_in_the_Game.pdf",
+      url: "/Skin_in_the_Game.pdf",
       doi: "https://doi.org/10.25624/kuenste-2498",
     },
   ],

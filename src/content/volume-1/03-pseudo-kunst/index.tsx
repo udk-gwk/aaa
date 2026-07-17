@@ -642,8 +642,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Daniel_Franke.pdf",
-      url: "/Daniel_Franke.pdf",
+      name: "Pseudo_Kunst.pdf",
+      url: "/Pseudo_Kunst.pdf",
       doi: "https://doi.org/10.25624/kuenste-2497",
     },
   ],

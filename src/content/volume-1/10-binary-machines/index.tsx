@@ -729,8 +729,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Zrinka_Štimac.pdf",
-      url: "/Zrinka_Stimac.pdf",
+      name: "Binary_Machines.pdf",
+      url: "/Binary_Machines.pdf",
       doi: "https://doi.org/10.25624/kuenste-2500",
     },
   ],

@@ -109,6 +109,11 @@ export const article: Article = {
           auf und wende sie deutlich auf das Outfit von Gottes Personal auf
           Erden an.
         </P>
+         <ArticleImage
+          src={img1}
+          alt="Heilige Sohlen"
+          caption=""
+        />
         <P>
           Die KI ist für mich dabei nicht nur mein Werkzeug, sondern Teil meines
           Konzepts. Damit kann ich Ideen in realitätsnahe Bilder umsetzen, die
@@ -195,6 +200,11 @@ export const article: Article = {
           auf und wende sie deutlich auf das Outfit von Gottes Personal auf
           Erden an.
         </P>
+        <ArticleImage
+          src={img1}
+          alt="Heilige Sohlen"
+          caption=""
+        />
         <P>
           Die KI ist für mich dabei nicht nur mein Werkzeug, sondern Teil meines
           Konzepts. Damit kann ich Ideen in realitätsnahe Bilder umsetzen, die
@@ -233,6 +243,10 @@ export const article: Article = {
           Fantasie von Wenzel Storch und den Sprach- und Gedankenwelten Arno
           Schmidts.
         </P>
+
+        <div className="w-full aspect-video my-8">
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PHgSxqYg8EQ?si=qiuIEij8YGDD_tLv" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+       </div>
       </>
     ),
   },
@@ -277,8 +291,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Holger_Doelle.pdf",
-      url: "/Holger_Doelle.pdf",
+      name: "Heilige_Sohlen.pdf",
+      url: "/Heilige_Sohlen.pdf",
       doi: "https://doi.org/10.25624/kuenste-2494",
     },
   ],

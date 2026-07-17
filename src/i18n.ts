@@ -27,7 +27,7 @@ Das ist unser Sommer 2026.`,
     documentsTableHeaders: ['DOI', 'Name', 'Date', 'Title', 'Keywords'],
     submitTitle: 'Call for Papers & Design',
     submitText: 'We are currently accepting submissions for Volume 2. Please send your manuscripts, visual essays, or interactive experiments to our editorial team.',
-    contactText: 'Reach out to us at contact@aaa-journal.org for any inquiries.',
+    contactText: 'Reach out to us at submission@udk.digital for any inquiries.',
     backToHome: 'Back to Home'
   },
   de: {
@@ -57,8 +57,8 @@ Das ist unser Sommer 2026.`,
     authorBio: 'Über den Autor',
     documentsTableHeaders: ['DOI', 'Name', 'Datum', 'Titel', 'Schlagworte'],
     submitTitle: 'Call for Papers & Design',
-    submitText: 'Wir nehmen derzeit Einreichungen für Volume 2 entgegen. Bitte senden Sie Ihre Manuskripte, visuellen Essays oder interaktiven Experimente an unsere Redaktion.',
-    contactText: 'Kontaktieren Sie uns unter contact@aaa-journal.org für Anfragen.',
+    submitText: 'Wir nehmen derzeit Einreichungen für Volume 2 entgegen. Bitte sendet Manuskripte, visuelle Essays oder interaktive Experimente an unsere Redaktion.',
+    contactText: 'Kontaktieren Sie uns unter submission@udk.digital für Anfragen.',
     backToHome: 'Zurück zur Startseite'
   }
 };

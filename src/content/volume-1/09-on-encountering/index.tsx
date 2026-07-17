@@ -287,8 +287,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Maham_Zahid.pdf",
-      url: "/Maham_Zahid.pdf",
+      name: "On_Encountering.pdf",
+      url: "/On_Encountering.pdf",
       doi: "https://doi.org/10.25624/kuenste-2491",
     },
   ],
