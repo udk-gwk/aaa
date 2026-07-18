@@ -43,7 +43,7 @@ export const article: Article = {
   },
   author: "Julia Thomas",
   date: "2026-07-18",
-  doi: "https://doi.org/10.25624/kuenste-2502",
+  doi: "https://doi.org/10.25624/kuenste-2496",
 
   headerImage: headerImg,
 
@@ -648,9 +648,9 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Julia_Thomas.pdf",
-      url: "/Julia_Thomas.pdf",
-      doi: "https://doi.org/10.25624/kuenste-2502",
+      name: "Generating_the_Identity_Token.pdf",
+      url: "/Generating_the_Identity_Token.pdf",
+      doi: "https://doi.org/10.25624/kuenste-2496",
     },
   ],
 };

@@ -711,8 +711,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Dominikus_Mucha.pdf",
-      url: "/Dominikus_Mucha.pdf",
+      name: "Grow_a_beard.pdf",
+      url: "/Grow_a_beard.pdf",
       doi: "https://doi.org/10.25624/kuenste-2495",
     },
   ],

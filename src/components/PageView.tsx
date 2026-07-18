@@ -50,9 +50,10 @@ export const PageView: React.FC<PageViewProps> = ({ lang, content }) => {
                   {block.heading}
                 </h2>
               )}
-              <div className="text-base md:text-lg font-serif text-gray-600 leading-relaxed whitespace-pre-wrap">
-                {block.text}
-              </div>
+              <div 
+                className="text-base md:text-lg font-serif text-gray-600 leading-relaxed whitespace-pre-wrap"
+                dangerouslySetInnerHTML={{ __html: block.text }}
+              />
             </motion.div>
           ))}
         </div>

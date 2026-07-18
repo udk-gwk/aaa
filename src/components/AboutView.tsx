@@ -18,9 +18,10 @@ export const AboutView: React.FC<AboutViewProps> = ({ lang }) => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-sans font-medium tracking-tight mb-8">
           {aboutContent.title[lang]}
         </h1>
-        <p className="text-xl md:text-2xl font-serif text-gray-600 leading-relaxed mb-24 max-w-3xl">
-          {aboutContent.description[lang]}
-        </p>
+        <p 
+          className="text-xl md:text-2xl font-serif text-gray-600 leading-relaxed mb-24 max-w-3xl"
+          dangerouslySetInnerHTML={{ __html: aboutContent.description[lang] }}
+        />
 
         <div className="space-y-24">
           {aboutContent.team.map((person, index) => (

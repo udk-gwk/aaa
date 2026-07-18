@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useLocation } from 'react-router-dom';
 import { Article, Language } from '../types';
 import { translations } from '../i18n';
 import { ChevronRight, ChevronLeft, ChevronDown } from 'lucide-react';
@@ -13,8 +14,20 @@ interface HomeViewProps {
 
 export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleClick, contributors }) => {
   const t = translations[lang];
+  const location = useLocation();
   const [currentSlide, setCurrentSlide] = useState(() => Math.floor(Math.random() * articles.length));
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
+
+  useEffect(() => {
+    if (location.hash === '#open-call') {
+      setTimeout(() => {
+        const element = document.getElementById('open-call');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [location]);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -166,7 +179,17 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
         </div>
 
         {/* Scroll down banner */}
-        <div className="absolute bottom-0 left-0 right-0 h-[35px] bg-white/80 backdrop-blur-md z-40 cursor-pointer pointer-events-auto flex items-center justify-center" onClick={() => window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}>
+        <div 
+          className="absolute bottom-0 left-0 right-0 h-[35px] bg-white/80 backdrop-blur-md z-40 cursor-pointer pointer-events-auto flex items-center justify-center" 
+          onClick={() => {
+            const el = document.getElementById('volume-1');
+            if (el) {
+              const yOffset = -100; 
+              const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+              window.scrollTo({ top: y, behavior: 'smooth' });
+            }
+          }}
+        >
           <motion.div 
             initial={{ y: 0 }}
             animate={{ y: [0, -5, 0] }}
@@ -198,7 +221,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
         </section>
 
         {/* Volume Grid */}
-        <section>
+        <section id="volume-1">
           <div className="mb-12">
              <div className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-gray-400 mb-2">{t.volume1}</div>
              <h3 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-black leading-none">Artikel</h3>
@@ -264,7 +287,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
           </div>
 
           {/* Submit */}
-          <div>
+          <div id="open-call">
             <div className="text-sm font-mono uppercase tracking-[0.2em] text-gray-400 mb-12">{t.submit}</div>
             <h3 className="text-3xl font-sans font-medium tracking-tight text-black mb-6">
               {t.submitTitle}
@@ -272,9 +295,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
             <p className="text-lg text-gray-600 font-serif leading-relaxed mb-10">
               {t.submitText}
             </p>
-            <button className="bg-black text-white px-8 py-4 uppercase font-mono text-sm tracking-[0.2em] hover:bg-gray-800 transition-colors">
+            <a 
+              href="mailto:submission@udk.digital" 
+              className="inline-block bg-black text-white px-8 py-4 uppercase font-mono text-sm tracking-[0.2em] hover:bg-gray-800 transition-colors"
+            >
               {lang === 'en' ? 'Submit via Email' : 'Per E-Mail einreichen'}
-            </button>
+            </a>
           </div>
         </section>
 

@@ -62,8 +62,8 @@ export const article: Article = {
   id: "art-7",
   volume: "Volume 1",
   title: {
-    en: "Glitched Skins ans Surfaces",
-    de: "Glitched Skins ans Surfaces",
+    en: "Glitched Skins and Surfaces",
+    de: "Glitched Skins and Surfaces",
   },
   author: "Yvon Chabrowski",
   date: "2026-07-18",
@@ -594,8 +594,8 @@ export const article: Article = {
   },
   documents: [
     {
-      name: "Yvon_Chabroswki.pdf",
-      url: "/Yvon Chabroswki.pdf",
+      name: "glitched_skins_and_surfaces.pdf",
+      url: "/glitched_skins_and_surfaces.pdf",
       doi: "https://doi.org/10.25624/kuenste-2501",
     },
   ],
