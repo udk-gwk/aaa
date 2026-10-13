@@ -1,5 +1,11 @@
 export const translations = {
   en: {
+    magazine: 'Magazine',
+    openCallTeaser: 'Submit your work for Volume 2.',
+    openCallLink: 'Explore the call',
+    headerPublisher: 'Published by\nUdK Berlin',
+    publisherPrefix: 'Published by the ',
+    publisherName: 'Berlin University of the Arts',
     callForDesign: 'Call for Design: Submit your work for Volume 2 now!',
     volume1: 'Volume 1',
     submit: 'Submit',
@@ -31,6 +37,12 @@ Das ist unser Sommer 2026.`,
     backToHome: 'Back to Home'
   },
   de: {
+    magazine: 'Magazin',
+    openCallTeaser: 'Reiche deine Arbeit für Volume 2 ein.',
+    openCallLink: 'Mehr erfahren',
+    headerPublisher: 'Herausgegeben von\nder UdK Berlin',
+    publisherPrefix: 'Herausgegeben von der ',
+    publisherName: 'Universität der Künste Berlin',
     callForDesign: 'Call for Design: Reiche jetzt Deine Arbeit für Volume 2 ein!',
     volume1: 'Volume 1',
     submit: 'Einreichen',

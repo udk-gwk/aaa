@@ -61,7 +61,14 @@ export const ArticleView: React.FC<ArticleViewProps> = ({ article, lang, onBack 
             </div>
             <div>
               <span className="block text-xs text-gray-400 mb-1">DOI</span>
-              <span className="text-black">{article.doi}</span>
+              <a
+                href={article.doi.trim()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="break-all text-black underline decoration-gray-400 underline-offset-4 hover:decoration-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >
+                {article.doi.trim()}
+              </a>
             </div>
           </div>
         </div>

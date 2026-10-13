@@ -18,6 +18,14 @@ export const Footer: React.FC<FooterProps> = ({ lang, onNavigate }) => {
             <h2 className="text-xl font-sans font-light tracking-tight leading-none text-black">
               Art,<br/>Aesthetics<br/>and AI
             </h2>
+            <p className="mt-5 max-w-xs font-mono text-xs leading-relaxed text-gray-500">
+              {t.publisherPrefix}<a
+                href="https://www.udk-berlin.de/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-gray-400 underline-offset-2 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+              >{t.publisherName}</a>
+            </p>
           </div>
           
           <nav className="flex flex-wrap justify-center gap-8">

@@ -38,8 +38,8 @@ export const article: Article = {
   id: "art-6",
   volume: "Volume 1",
   title: {
-    en: "Motivational Speech",
-    de: "Motivational Speech",
+    en: "Motivational Speech Synthesis",
+    de: "Motivational Speech Synthesis",
   },
   author: "Luis Küffner et al.",
   date: "2026-07-18",

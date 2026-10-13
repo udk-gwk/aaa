@@ -19,15 +19,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
 
   useEffect(() => {
-    if (location.hash === '#open-call') {
-      setTimeout(() => {
-        const element = document.getElementById('open-call');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  }, [location]);
+    if (location.hash !== '#editorial' && location.hash !== '#open-call') return;
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'auto' });
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [location.hash]);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -182,12 +179,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
         <div 
           className="absolute bottom-0 left-0 right-0 h-[35px] bg-white/80 backdrop-blur-md z-40 cursor-pointer pointer-events-auto flex items-center justify-center" 
           onClick={() => {
-            const el = document.getElementById('volume-1');
-            if (el) {
-              const yOffset = -100; 
-              const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-              window.scrollTo({ top: y, behavior: 'smooth' });
-            }
+            document.getElementById('volume-1')?.scrollIntoView({ behavior: 'smooth' });
           }}
         >
           <motion.div 
@@ -208,7 +200,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full relative z-10 space-y-48">
         
         {/* Editorial Section */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+        <section id="editorial" className="scroll-mt-24 sm:scroll-mt-28 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
           <div className="md:col-span-1">
             <div className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-gray-400 mb-4">{t.editorial}</div>
             <h3 className="text-2xl md:text-4xl font-sans font-light tracking-tight text-black leading-none">
@@ -221,7 +213,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
         </section>
 
         {/* Volume Grid */}
-        <section id="volume-1">
+        <section id="volume-1" className="scroll-mt-24 sm:scroll-mt-28">
           <div className="mb-12">
              <div className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-gray-400 mb-2">{t.volume1}</div>
              <h3 className="text-3xl md:text-4xl font-sans font-medium tracking-tight text-black leading-none">Artikel</h3>
@@ -287,7 +279,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
           </div>
 
           {/* Submit */}
-          <div id="open-call">
+          <div id="open-call" className="scroll-mt-24 sm:scroll-mt-28">
             <div className="text-sm font-mono uppercase tracking-[0.2em] text-gray-400 mb-12">{t.submit}</div>
             <h3 className="text-3xl font-sans font-medium tracking-tight text-black mb-6">
               {t.submitTitle}

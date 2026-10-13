@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Language, Article } from './types';
 import { articles, contributors } from './data';
@@ -23,11 +23,15 @@ export default function App() {
                     : location.pathname.substring(1);
 
   const handleNavigate = (view: string) => {
-    if (view === 'home') {
-      navigate('/');
-    } else {
-      navigate(`/${view}`);
+    if (view === 'editorial' || view === 'open-call') {
+      if (location.pathname === '/' && location.hash === `#${view}`) {
+        document.getElementById(view)?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate(`/#${view}`);
+      }
+      return;
     }
+    navigate(view === 'home' ? '/' : `/${view}`);
     window.scrollTo(0, 0);
   };
 
