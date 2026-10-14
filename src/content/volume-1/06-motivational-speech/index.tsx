@@ -14,22 +14,36 @@ const localImages = import.meta.glob("./*.{jpg,jpeg,png,webp}", {
   eager: true,
   import: "default",
 });
+const localVideos = import.meta.glob("./*.{mp4,webm}", {
+  eager: true,
+  import: "default",
+});
 
 const getImg = (name: string, fallback: string) => {
   const key = Object.keys(localImages).find((k) => k.includes(name));
   return key ? (localImages[key] as string) : fallback;
 };
 
+const getVideo = (name: string) => {
+  const key = Object.keys(localVideos).find((k) => k.includes(name));
+  return key ? (localVideos[key] as string) : undefined;
+};
+
 const headerImg = getImg(
   "header",
   "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2944&auto=format&fit=crop",
 );
+const headerVid = getVideo("header");
 const img1 = getImg(
   "img1",
   "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
 );
 const img2 = getImg(
   "img2",
+  "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2940&auto=format&fit=crop",
+);
+const img3 = getImg(
+  "img3",
   "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2940&auto=format&fit=crop",
 );
 
@@ -41,11 +55,12 @@ export const article: Article = {
     en: "Motivational Speech Synthesis",
     de: "Motivational Speech Synthesis",
   },
-  author: "Luis Küffner et al.",
+  author: "Luis Küffner, Pierre-Louis Suckrow, Patrick Stecher, Nikolaj Wolff",
   date: "2026-07-18",
   doi: "https://doi.org/10.25624/kuenste-2492",
 
   headerImage: headerImg,
+  headerVideo: headerVid,
 
   excerpt: {
     en: "A digital mirror reflecting the soundtrack of toxic self-exploitation.",
@@ -209,7 +224,17 @@ export const article: Article = {
           dataset comprising 414,024 data points with a total duration of
           approximately 371 hours.
         </P>
-
+        <ArticleImage
+          src={img1}
+          alt="Overview of the data processing pipeline."
+          caption="Overview of the data processing pipeline."
+        />
+        <Subheading>Model architecture</Subheading>
+        <ArticleImage
+          src={img2}
+          alt="Model architecture"
+          caption="Proposed model architecture with EmoKnob TTS model that uses our motivational factor directly at inference and a reference audio averaged from our motivational speech corpus"
+        />
         <P>
           After evaluating text-to-speech (TTS) models capable of emotional
           conditioning, we based our architecture on established approaches.
@@ -283,7 +308,11 @@ export const article: Article = {
           future research in emotion-specific speech synthesis across various
           tasks and domains.
         </P>
-
+        <ArticleImage
+          src={img3}
+          alt="Visualization of dataset"
+          caption="Visualization of 2000 dataset audio points embedded into VAD space. Motivational factor representation via colormap."
+        />
         <P>
           Figure 3 visualizes a subset of audio data points that were randomly
           selected along the motivational factor dimension and projected into
@@ -496,7 +525,17 @@ export const article: Article = {
           dataset comprising 414,024 data points with a total duration of
           approximately 371 hours.
         </P>
-
+        <ArticleImage
+          src={img1}
+          alt="Overview of the data processing pipeline."
+          caption="Overview of the data processing pipeline."
+        />
+        <Subheading>Model architecture</Subheading>
+        <ArticleImage
+          src={img2}
+          alt="Model architecture"
+          caption="Proposed model architecture with EmoKnob TTS model that uses our motivational factor directly at inference and a reference audio averaged from our motivational speech corpus"
+        />
         <P>
           After evaluating text-to-speech (TTS) models capable of emotional
           conditioning, we based our architecture on established approaches.
@@ -570,7 +609,11 @@ export const article: Article = {
           future research in emotion-specific speech synthesis across various
           tasks and domains.
         </P>
-
+        <ArticleImage
+          src={img3}
+          alt="Visualization of dataset"
+          caption="Visualization of 2000 dataset audio points embedded into VAD space. Motivational factor representation via colormap."
+        />
         <P>
           Figure 3 visualizes a subset of audio data points that were randomly
           selected along the motivational factor dimension and projected into
