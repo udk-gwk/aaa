@@ -152,6 +152,10 @@ export const article: Article = {
           Fantasie von Wenzel Storch und den Sprach- und Gedankenwelten Arno
           Schmidts.
         </P>
+
+        <div className="w-full aspect-video my-8">
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PHgSxqYg8EQ?si=qiuIEij8YGDD_tLv" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+       </div>
       </>
     ),
     de: (

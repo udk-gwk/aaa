@@ -367,6 +367,9 @@ export const article: Article = {
           the computational resources, as well as ai-coustics for providing
           their speech-enhancement model to improve our dataset.
         </P>
+        <div className="w-full aspect-video my-8">
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/p8cmRC39UpY?si=ZQPCchhw69GHbXS6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+       </div>
       </>
     ),
     de: (
@@ -668,6 +671,9 @@ export const article: Article = {
           the computational resources, as well as ai-coustics for providing
           their speech-enhancement model to improve our dataset.
         </P>
+        <div className="w-full aspect-video my-8">
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/p8cmRC39UpY?si=ZQPCchhw69GHbXS6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+       </div>
       </>
     ),
   },
