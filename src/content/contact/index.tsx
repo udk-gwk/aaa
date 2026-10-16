@@ -10,14 +10,8 @@ export const contactContent = {
         text: 'We are always looking for new perspectives, visual essays, and critical discourse.'
       },
       {
-        heading: 'Email',
-        text: (
-          <>
-            <a href="mailto:aaa@udk.digital">aaa@udk.digital</a>
-            <br />
-            <a href="mailto:submission@udk.digital">submission@udk.digital</a>
-          </>
-        )
+        heading: 'E-Mail',
+        text: '<a href="mailto:aaa@udk.digital">aaa@udk.digital</a>'
       }
     ],
     de: [
@@ -27,13 +21,7 @@ export const contactContent = {
       },
       {
         heading: 'E-Mail',
-        text: (
-          <>
-            <a href="mailto:aaa@udk.digital">aaa@udk.digital</a>
-            <br />
-            <a href="mailto:submission@udk.digital">submission@udk.digital</a>
-          </>
-        )
+        text: '<a href="mailto:aaa@udk.digital">aaa@udk.digital</a>'
       }
     ]
   }

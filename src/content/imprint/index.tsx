@@ -14,14 +14,8 @@ export const imprintContent = {
         text: 'V.i.S.d.P.: die Redaktion\nRedaktion/Editorial Board: Daniel Franke, Prof. Christiane Kühl, Dominikus Mucha, Prof. Max Senges\nMitarbeit: Philipp Kasdorff'
       },
       {
-        heading: 'Contact',
-        text: (
-          <>
-            Email: <a href="mailto:aaa@udk.digital">aaa@udk.digital</a>
-            <br />
-            Website: <a href="https://aaa.udk.digital/" target="_blank" rel="noreferrer">https://aaa.udk.digital/</a>
-          </>
-        )
+        heading: 'E-Mail',
+        text: '<a href="mailto:aaa@udk.digital">aaa@udk.digital</a>'
       },
       {
         heading: 'License & Additional Info',
@@ -38,14 +32,8 @@ export const imprintContent = {
         text: 'V.i.S.d.P.: die Redaktion\nRedaktion/Editorial Board: Daniel Franke, Prof. Christiane Kühl, Dominikus Mucha, Prof. Max Senges\nMitarbeit: Philipp Kasdorff'
       },
       {
-        heading: 'Contact',
-        text: (
-          <>
-            Email: <a href="mailto:aaa@udk.digital">aaa@udk.digital</a>
-            <br />
-            Website: <a href="https://aaa.udk.digital/" target="_blank" rel="noreferrer">https://aaa.udk.digital/</a>
-          </>
-        )
+        heading: 'E-Mail',
+        text: '<a href="mailto:aaa@udk.digital">aaa@udk.digital</a>'
       },
       {
         heading: 'License & Additional Info',
