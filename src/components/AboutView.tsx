@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 import { Language } from '../types';
 import { aboutContent } from '../content/about';
 
@@ -8,6 +9,18 @@ interface AboutViewProps {
 }
 
 export const AboutView: React.FC<AboutViewProps> = ({ lang }) => {
+  const navigate = useNavigate();
+
+  const handleDescriptionClick = (event: React.MouseEvent<HTMLParagraphElement>) => {
+    const anchor = (event.target as HTMLElement).closest('a');
+    if (!anchor || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (anchor.getAttribute('href')?.endsWith('open-call')) {
+      event.preventDefault();
+      navigate('/open-call');
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <div className="min-h-screen pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       <motion.div
@@ -19,6 +32,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ lang }) => {
           {aboutContent.title[lang]}
         </h1>
         <p 
+          onClick={handleDescriptionClick}
           className="text-xl md:text-2xl font-serif text-gray-600 leading-relaxed mb-24 max-w-3xl"
           dangerouslySetInnerHTML={{ __html: aboutContent.description[lang] }}
         />

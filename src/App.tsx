@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 import { HomeView } from './components/HomeView';
 import { ArticleViewWrapper } from './components/ArticleViewWrapper';
 import { AboutView } from './components/AboutView';
+import { OpenCallView } from './components/OpenCallView';
 import { PageView } from './components/PageView';
 import { imprintContent } from './content/imprint';
 import { privacyContent } from './content/privacy';
@@ -23,7 +24,7 @@ export default function App() {
                     : location.pathname.substring(1);
 
   const handleNavigate = (view: string) => {
-    if (view === 'editorial' || view === 'open-call') {
+    if (view === 'editorial' || view === 'volume-1' || view === 'contributors') {
       if (location.pathname === '/' && location.hash === `#${view}`) {
         document.getElementById(view)?.scrollIntoView({ behavior: 'smooth' });
       } else {
@@ -47,6 +48,8 @@ export default function App() {
         setLang={setLang} 
         onNavigate={handleNavigate}
         currentView={currentView}
+        articles={articles}
+        contributors={contributors}
       />
       
       <main>
@@ -63,6 +66,7 @@ export default function App() {
             <ArticleViewWrapper lang={lang} onBack={() => handleNavigate('home')} />
           } />
           <Route path="/about" element={<AboutView lang={lang} />} />
+          <Route path="/open-call" element={<OpenCallView lang={lang} />} />
           <Route path="/imprint" element={<PageView lang={lang} content={imprintContent} />} />
           <Route path="/privacy" element={<PageView lang={lang} content={privacyContent} />} />
           <Route path="/contact" element={<PageView lang={lang} content={contactContent} />} />

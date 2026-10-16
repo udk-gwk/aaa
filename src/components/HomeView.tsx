@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Article, Language } from '../types';
 import { translations } from '../i18n';
 import { ChevronRight, ChevronLeft, ChevronDown } from 'lucide-react';
@@ -19,9 +19,10 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
   const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
 
   useEffect(() => {
-    if (location.hash !== '#editorial' && location.hash !== '#open-call') return;
+    const id = location.hash.slice(1);
+    if (!['editorial', 'volume-1', 'contributors', 'open-call'].includes(id)) return;
     const frame = window.requestAnimationFrame(() => {
-      document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'auto' });
+      document.getElementById(id)?.scrollIntoView({ behavior: 'auto' });
     });
     return () => window.cancelAnimationFrame(frame);
   }, [location.hash]);
@@ -267,7 +268,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
         {/* Contributors & Submit Section (Side by Side on Desktop) */}
         <section className="grid grid-cols-1 md:grid-cols-2 gap-24">
           {/* Contributors */}
-          <div>
+          <div id="contributors" className="scroll-mt-24 sm:scroll-mt-28">
             <div className="text-sm font-mono uppercase tracking-[0.2em] text-gray-400 mb-12">{t.contributors}</div>
             <ul className="space-y-1">
               {contributors.map((name, idx) => (
@@ -287,12 +288,13 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
             <p className="text-lg text-gray-600 font-serif leading-relaxed mb-10">
               {t.submitText}
             </p>
-            <a 
-              href="mailto:submission@udk.digital" 
+            <Link
+              to="/open-call"
+              onClick={() => window.scrollTo(0, 0)}
               className="inline-block bg-black text-white px-8 py-4 uppercase font-mono text-sm tracking-[0.2em] hover:bg-gray-800 transition-colors"
             >
-              {lang === 'en' ? 'Submit via Email' : 'Per E-Mail einreichen'}
-            </a>
+              {lang === 'en' ? 'Open Call' : 'Zum Open Call'}
+            </Link>
           </div>
         </section>
 
