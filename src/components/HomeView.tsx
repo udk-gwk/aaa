@@ -186,7 +186,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ articles, lang, onArticleCli
           <motion.div 
             initial={{ y: 0 }}
             animate={{ y: [0, -5, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            transition={{ repeat: Infinity, repeatDelay: 4, duration: 0.6, ease: "easeInOut" }}
             className="flex items-center gap-2 text-black"
           >
             <span className="font-mono uppercase text-xs sm:text-sm tracking-[0.2em]">
